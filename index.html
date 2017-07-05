@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> World Cup 2014 </title>
+  <link rel="stylesheet" href="css/materialize.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" href="http://www.capital.cl/wp-content/uploads/2014/05/foto-google_mundial2014-brazil-2014-50x50.jpg">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script src="js/matches.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".button-collapse").sideNav();
+  });
+
+    function pitbull(){
+      document.getElementById("song-pitbull").innerHTML='<audio autoplay controls><source src="Music/WeAreOne.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+    }
+
+     function shakira(){
+      document.getElementById("song-shakira").innerHTML='<audio autoplay controls><source src="Music/LaLaLa-english.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+    }
+  </script>
+</head>
+<body>
+<div class="row">
+<!--menu-->
+<nav>
+    <div class="nav-wrapper light-green darken-4">
+      <a href="#!" class="brand-logo" style="margin-left: 20px;"><img class="hide-on-small-only" src="media/logo.png" style="margin-left: 10px; margin-top: 10px;"><div class="hide-on-med-and-up">Brazil 2014</div></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="spanish.html" class="btn btn-floating grey">ES</a></li>
+      </ul>
+     <ul id="slide-out" class="side-nav">
+    <li><div class="userView">
+      <div class="background">
+        <img src="http://vassets.ea.com/Assets/Resources/Image/WorldCupPortada.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="media/brand.jpg"></a>
+      <a href="#!name"><span class="white-text name">World Cup Brazil 2014</span></a>
+    </div></li>
+        <li><a href="../16-17/index.html"><i class="material-icons">ondemand_video</i>Matchs</a></li>
+        <li><a href="../16-17/stats.html"><i class="material-icons">equalizer</i>Stats</a></li>
+        <li><a href="../16-17/gallery.html"><i class="material-icons">photo</i>Gallery</a></li>
+        <li><a href="../16-17/specials.html"><i class="material-icons">theaters</i>Specials</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="../../index.html"><i class="material-icons">view_list</i>Seasons</a></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+<!--Matches-->
+<div class="col s12 m9 l9">
+   <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header" onclick="G1()"><i class="material-icons">hd</i>Brazil vs Croatia - Group A</div>
+      <div class="collapsible-body">
+        <p id="md1"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G2()"><i class="material-icons">hd</i>Mexico vs Cameroon - Group A</div>
+      <div class="collapsible-body">
+        <p id="md2"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G3()"><i class="material-icons">hd</i>Spain vs Nederlands - Group B</div>
+      <div class="collapsible-body">
+        <p id="md3"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G4()"><i class="material-icons">hd</i>Chile vs Australia - Group B</div>
+      <div class="collapsible-body">
+        <div class="video-container">
+        <p id="md4"></p>
+      </div>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G5()"><i class="material-icons">hd</i>Colombia vs Greece - Group C</div>
+      <div class="collapsible-body">
+        <p id="md5"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G6()"><i class="material-icons">hd</i>Uruguay vs Costa Rica - Group D</div>
+      <div class="collapsible-body">
+        <p id="md6"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G7()"><i class="material-icons">hd</i>England vs Italy - Group D</div>
+      <div class="collapsible-body">
+        <p id="md7"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G8()"><i class="material-icons">hd</i>Ivory Coast vs Japan - Group C </div>
+      <div class="collapsible-body">
+        <p id="md8"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G9()"><i class="material-icons">hd</i>Switzerland vs Ecuadord - Group E</div>
+      <div class="collapsible-body">
+        <p id="md9"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G10()"><i class="material-icons">hd</i>France vs Honduras - Group E</div>
+      <div class="collapsible-body">
+        <p id="md10"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G11()"><i class="material-icons">hd</i>Argentina vs Boznia Herzegovina - Group F</div>
+      <div class="collapsible-body">
+        <p id="md11"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G12()"><i class="material-icons">hd</i>Germany vs Portugal - Group G</div>
+      <div class="collapsible-body">
+        <p id="md12"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G13()"><i class="material-icons">hd</i>Iran vs Nigeria - Group F</div>
+      <div class="collapsible-body">
+        <p id="md13"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G14()"><i class="material-icons">hd</i>Ghana vs USA - Group G</div>
+      <div class="collapsible-body">
+        <p id="md14"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G15()"><i class="material-icons">hd</i>Belgium vs Algeria - Group H</div>
+      <div class="collapsible-body">
+        <p id="md15"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G16()"><i class="material-icons">hd</i>Brazil vs Mexico - Group A</div>
+      <div class="collapsible-body">
+        <p id="md16"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G17()"><i class="material-icons">hd</i>Russia vs Korea Republic - Group H</div>
+      <div class="collapsible-body">
+        <p id="md17">
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G18()"><i class="material-icons">hd</i>Australia vs Nederlands - Group B</div>
+      <div class="collapsible-body">
+        <p id="md18"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G19()"><i class="material-icons">hd</i>Spain vs Chile - Group B</div>
+      <div class="collapsible-body">
+        <p id="md19"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G20()"><i class="material-icons">hd</i>Cameroon vs Croatia - Group A</div>
+      <div class="collapsible-body">
+        <p id="md20"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G21()"><i class="material-icons">hd</i>Colombia vs Ivory Coast - Group C</div>
+      <div class="collapsible-body">
+        <p id="md21">
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G22()"><i class="material-icons">hd</i>Uruguay vs England - Group D</div>
+      <div class="collapsible-body">
+        <p id="md22"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G23()"><i class="material-icons">hd</i>Japan vs Greece - Group C</div>
+      <div class="collapsible-body">
+        <p id="md23"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G24()"><i class="material-icons">hd</i>Italy vs Costa Rica - Group D</div>
+      <div class="collapsible-body">
+        <p id="md24">
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G25()"><i class="material-icons">hd</i>Switzerland vs France - Group E</div>
+      <div class="collapsible-body">
+        <p id="md25">
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G26()"><i class="material-icons">hd</i>Honduras vs Ecuador - Group E</div>
+      <div class="collapsible-body">
+        <p id="md26"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G27()"><i class="material-icons">hd</i>Argentina vs Iran - Group F</div>
+      <div class="collapsible-body">
+        <p id="md27"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G28()"><i class="material-icons">hd</i>Germany vs Ghana - Group G</div>
+      <div class="collapsible-body">
+        <p id="md28"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G29()"><i class="material-icons">hd</i>Nigeria vs Boznia Herzegovina - Group F</div>
+      <div class="collapsible-body">
+        <p id="md29"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G30()"><i class="material-icons">hd</i>Belgium vs Russia - Group H</div>
+      <div class="collapsible-body">
+        <p id="md30"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G31()"><i class="material-icons">hd</i>Korea Republic vs Algeria - Group H</div>
+      <div class="collapsible-body">
+        <p id="md31">
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G32()"><i class="material-icons">hd</i>USA vs Portugal - Group G</div>
+      <div class="collapsible-body">
+        <p id="md32"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G33()"><i class="material-icons">hd</i>Australia vs Spain - Group B</div>
+      <div class="collapsible-body">
+        <p id="md33"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G34()"><i class="material-icons">hd</i>Nederlands vs Chile - Group B</div>
+      <div class="collapsible-body">
+        <p id="md34"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G35()"><i class="material-icons">hd</i>Cameroon vs Brazil - Group A</div>
+      <div class="collapsible-body">
+        <p id="md35"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G36()"><i class="material-icons">hd</i>Croatia vs Mexico - Group A</div>
+      <div class="collapsible-body">
+        <p id="md36"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G37()"><i class="material-icons">hd</i>Italy vs Uruguay - Group D</div>
+      <div class="collapsible-body">
+        <p id="md37"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G38()"><i class="material-icons">hd</i>Costa Rica vs England - Group D</div>
+      <div class="collapsible-body">
+        <p id="md38"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G39()"><i class="material-icons">hd</i>Japan vs Colombia - Group C</div>
+      <div class="collapsible-body">
+        <p id="md39"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G40()"><i class="material-icons">hd</i>Greece vs Ivory Coast - Group C</div>
+      <div class="collapsible-body">
+        <p id="md40"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G41()"><i class="material-icons">hd</i>Nigeria vs Argentina - Group F</div>
+      <div class="collapsible-body">
+        <p id="md41"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G42()"><i class="material-icons">hd</i>Boznia Herzegovina vs Iran - Group F</div>
+      <div class="collapsible-body">
+        <p id="md42"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G43()"><i class="material-icons">hd</i>Honduras vs Switzerland - Group E</div>
+      <div class="collapsible-body">
+        <p id="md43"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G44()"><i class="material-icons">hd</i>Ecuador vs France - Group E</div>
+      <div class="collapsible-body">
+        <p id="md44"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G45()"><i class="material-icons">hd</i>USA vs Germany &amp; Portugal vs Ghana - Group G</div>
+      <div class="collapsible-body">
+        <p id="md45"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G46()"><i class="material-icons">hd</i>Korea Republic vs Belgium &amp; Algeria vs Russia - Group H</div>
+      <div class="collapsible-body">
+        <p id="md46"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G47()"><i class="material-icons">hd</i>Brazil vs Chile - Round of 16</div>
+      <div class="collapsible-body">
+        <p id="md47"></p>
+      </div>
+    </li>
+     <li>
+      <div class="collapsible-header" onclick="G48()"><i class="material-icons">hd</i>Colombia vs Uruguay - Round of 16</div>
+      <div class="collapsible-body">
+        <p id="md48"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G49()"><i class="material-icons">hd</i>Nederlands vs Mexico - Round of 16</div>
+      <div class="collapsible-body">
+        <p id="md49"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G50()"><i class="material-icons">hd</i>Costa Rica vs Greece - Round of 16</div>
+      <div class="collapsible-body">
+        <p id="md50"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G51()"><i class="material-icons">hd</i>France vs Nigeria - Round of 16</div>
+      <div class="collapsible-body">
+        <p id="md51"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G52()"><i class="material-icons">hd</i>Germany vs Algeria - Round of 16</div>
+      <div class="collapsible-body">
+        <p id="md52"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G53()"><i class="material-icons">hd</i>Argentina vs Switzerland - Round of 16</div>
+      <div class="collapsible-body">
+        <p id="md53"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G54()"><i class="material-icons">hd</i>Belgium vs USA - Round of 16</div>
+      <div class="collapsible-body">
+        <p id="md54"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G55()"><i class="material-icons">hd</i>France vs Germany - Quarter Finals</div>
+      <div class="collapsible-body">
+        <p id="md55"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G56()"><i class="material-icons">hd</i>Brazil vs Colombia - Quarter Finals</div>
+      <div class="collapsible-body">
+        <p id="md56"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G57()"><i class="material-icons">hd</i>Argentina vs Belgium - Quarter Finals</div>
+      <div class="collapsible-body">
+        <p id="md57"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G58()"><i class="material-icons">hd</i>Nederlands vs Costa Rica - Quarter Finals</div>
+      <div class="collapsible-body">
+        <p id="md58"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G59()"><i class="material-icons">hd</i>Brazil vs Germany - SemiFinals</div>
+      <div class="collapsible-body">
+        <p id="md59"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G60()"><i class="material-icons">hd</i>Nederlands vs Argentina - SemiFinals</div>
+      <div class="collapsible-body">
+        <p id="md60"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G61()"><i class="material-icons">hd</i>Brazil vs Nederlands - Play-off for Third Place</div>
+      <div class="collapsible-body">
+        <p id="md61"></p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" onclick="G62()"><i class="material-icons">hd</i>Germany vs Argentina - Final</div>
+      <div class="collapsible-body">
+        <p id="md62"></p>
+      </div>
+    </li>
+  </ul>
+</div>  
+<div class="col s12 m3 l3">
+<img src="media/image.gif" width="100%">
+<ul id="tabs-swipe-demo" class="tabs">
+    <li class="tab col s6"><a class="active" href="#test-swipe-1">Official Song</a></li>
+    <li class="tab col s6"><a href="#test-swipe-2">Shakira's Song</a></li>
+  </ul>
+  <div id="test-swipe-1" class="col s12"><div class="card">
+        <div class="card-image">
+          <img src="media/official.song.jpg">
+          <a onclick="pitbull()" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">play_circle_outline</i></a>
+        </div>
+        <div class="card-content">
+          <span class="card-title">We Are One</span>
+          <p id="song-pitbull">Pitbull ft Jennifer Lopez</p>
+        </div>
+      </div>
+</div>
+  <div id="test-swipe-2" class="col s12"><div class="card">
+        <div class="card-image">
+          <img src="media/shakira.song.jpg">
+          <a onclick="shakira()" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">play_circle_outline</i></a>
+        </div>
+        <div class="card-content">
+        <span class="card-title">La La La</span>
+          <p id="song-shakira">Shakira ft Carlinhos Brown</p>
+        </div>
+      </div>
+</div></div>
+</div>
+<footer class="page-footer light-green darken-4">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12" >
+                <h5 class="white-text">World Cup 2014</h5>
+                <p class="grey-text text-lighten-4">Highlights & Goals.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Social Media</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://twitter.com/CTellez98">Twitter Personal</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Carlos Tellez
+            <a class="grey-text text-lighten-4 right" href="http://materializecss.com/">Materialize Framework</a>
+            </div>
+          </div>
+        </footer>
+</body>
+</html>
+  
